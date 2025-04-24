@@ -29,9 +29,14 @@ $result = $conn ->query("SELECT * from books");
             }
              ?></td>
             <td>
-                <button class="btn btn-warning" type="button">Edit</button>
+                <button class="btn btn-warning" type="button">
+                    <a href="edit.php?id=<?= $row['book_id']?>">
+                        Edit
+                    </a>
+                </button>
                 <button class="btn btn-danger" type="button" >
-                    <a href="delete.php?=<?= $row['book_id']?>" 
+
+                    <a href="delete.php?id=<?= $row['book_id']?>" 
                     class="text-decoration-none text-light">Delete</a>
                 </button>
             </td>
