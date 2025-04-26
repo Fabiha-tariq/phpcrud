@@ -32,6 +32,9 @@
         <li class="nav-item">
           <a class="nav-link" href="category/index.php">Category</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blog/index.php">blog</a>
+        </li>
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

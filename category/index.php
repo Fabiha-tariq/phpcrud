@@ -12,7 +12,6 @@ $result = $conn->query("select * from category");
         <thead>
             <tr>
                 <th>Category name</th>
-                <th>Category desc</th>
                 <th>Category status</th>
                 <th>Action</th>
             </tr>
@@ -21,7 +20,7 @@ $result = $conn->query("select * from category");
             <?php while ($row = $result->fetch_assoc()): ?>
                 <tr>
                     <td><?= $row['cat_name'] ?></td>
-                    <td><?= $row['cat_desc'] ?></td>
+                 
                     <td><?php if ($row['cat_status'] == 1) {
                         echo '<strong> Active</strong>';
                     } else {
@@ -32,8 +31,12 @@ $result = $conn->query("select * from category");
                         <button type="button" class="btn btn-warning">
                             <a href="edit.php?id=<?= $row['id'] ?>">Edit</a>
                         </button>
-                        <button type="button" class="btn btn-danger">Delete</button>
-                        <button type="button" class="btn btn-info">Detail</button>
+                        <button type="button" class="btn btn-danger">
+                        <a href="delete.php?id=<?= $row['id'] ?>" class="text-light text-decoration-none">Delete</a>
+                        </button>
+                        <button type="button" class="btn btn-info">
+                        <a href="detail.php?id=<?= $row['id'] ?>" class="text-light text-decoration-none">Detail</a>
+                        </button>
                     </td>
                 </tr>
             <?php endwhile; ?>
