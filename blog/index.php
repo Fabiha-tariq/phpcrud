@@ -26,8 +26,12 @@ $result = $conn -> query("select * from blog");
         <img src="images/<?= $row['image']  ?>" width="100px" height="100px" alt="">
     </td>
       <td>
-      <button>Edit</button>
-      <button>Delete</button>
+      <button class="btn btn-warning" type="button" >
+        <a href="edit.php?id=<?= $row['id']  ?>" class="text-decoration-none text-dark">Edit</a>
+      </button>
+      <button class="btn btn-danger" type="button" >
+        <a href="delete.php?id=<?= $row['id']  ?>" class="text-decoration-none text-light">Delete</a>
+      </button>
       </td>
     </tr>
     <?php endwhile;?>
